@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     private String gatewayUrl;
     private static final String PREFS = "openclaw_prefs";
     private static final String KEY_URL = "gateway_url";
-    private static final String DEFAULT_URL = "http://localhost:18789";
+    private static final String DEFAULT_URL = "http://127.0.0.1:18789";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,7 +132,7 @@ public class MainActivity extends Activity {
 
             new AlertDialog.Builder(this)
                 .setTitle("EVEZ OpenClaw Gateway")
-                .setMessage("Enter your OpenClaw gateway URL.\n\nFor local: http://localhost:18789\nFor network: http://YOUR_IP:18789\nFor cloud: https://your-deploy.fly.dev")
+                .setMessage("Enter your OpenClaw gateway URL.\n\nFor A16 Termux: http://127.0.0.1:18789\nFor LAN: http://YOUR_PC_IP:18789\nFor cloud: https://your-deploy.fly.dev\nPWA/Docs: github.com/EvezArt/evez-openclaw-deploy")
                 .setView(layout)
                 .setPositiveButton("Connect", (dialog, which) -> {
                     String url = input.getText().toString().trim();

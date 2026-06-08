@@ -48,3 +48,19 @@ Or transfer the APK file to your phone and tap to install (enable "Install from 
 - `OpenClawService.java` — Foreground service to maintain connection
 - `BootReceiver.java` — Auto-start service on device boot
 - `EVEZBridge` JS interface — Native ↔ web communication
+
+
+## Installed Surfaces
+
+This APK is one of three Galaxy A16 surfaces:
+
+1. **Native wrapper APK** — this repo; loads any OpenClaw Control gateway URL.
+2. **PWA** — `evez-openclaw-deploy/pwa`, installable from Chrome.
+3. **Local Termux gateway** — run `scripts/a16-termux-bootstrap.sh` to run OpenClaw directly on the phone, then connect this APK to `http://127.0.0.1:18789`.
+
+For fastest setup on the A16:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/EvezArt/evez-openclaw-apk/main/scripts/a16-termux-bootstrap.sh | bash
+~/start-openclaw.sh
+```
